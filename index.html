@@ -158,9 +158,7 @@
             <p class="text-[10px] text-emerald-200/60 mt-1">التوقيت المحلي</p>
           </div>
         </div>
-
         <div id="prayerGrid" class="grid grid-cols-5 gap-2 mt-5"></div>
-
         <div class="mt-4 bg-black/30 rounded-2xl p-3.5 flex items-center justify-between border border-emerald-900/40">
           <div class="flex items-center gap-2">
             <div class="w-8 h-8 rounded-xl bg-emerald-500/15 flex items-center justify-center">
@@ -175,40 +173,31 @@
             <p id="countdown" class="font-mono text-xl font-bold text-emerald-300 tracking-wider">--:--:--</p>
           </div>
         </div>
+      </div>
 
-        <!-- Daily Content: Dua / Hadith / Ayah -->
-        <div class="glass rounded-[32px] p-5 space-y-4">
-          <h3 class="font-bold text-lg flex items-center gap-2 mb-1">
-            <span class="w-8 h-8 rounded-xl bg-emerald-500/15 flex items-center justify-center">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4 2 7-6.5-4-6.5 4 2-7L2 9h7z"/></svg>
-            </span>
-            ورد اليوم
-          </h3>
-
-          <!-- Dua -->
-          <div class="bg-black/30 rounded-2xl p-4 border border-emerald-900/40">
-            <div class="flex items-center justify-between mb-2">
-              <p class="text-[12px] text-emerald-300/80">دعاء اليوم</p>
-              
-            </div>
-            <p id="dailyDua" class="quran text-[20px] leading-[1.9] text-emerald-50">اللهم اجعل يومنا هذا خيراً</p>
+      <!-- ورد اليوم -->
+      <div class="glass rounded-[32px] p-5 space-y-4">
+        <h3 class="font-bold text-lg flex items-center gap-2 mb-1">
+          <span class="w-8 h-8 rounded-xl bg-emerald-500/15 flex items-center justify-center">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4 2 7-6.5-4-6.5 4 2-7L2 9h7z"/></svg>
+          </span>
+          ورد اليوم
+        </h3>
+        <div class="bg-black/30 rounded-2xl p-4 border border-emerald-900/40">
+          <p class="text-[12px] text-emerald-300/80 mb-2">دعاء اليوم</p>
+          <p id="dailyDua" class="quran text-[20px] leading-[1.9] text-emerald-50">اللهم اجعل يومنا هذا خيراً</p>
+        </div>
+        <div class="bg-black/30 rounded-2xl p-4 border border-emerald-900/40">
+          <p class="text-[12px] text-emerald-300/80 mb-2">حديث اليوم</p>
+          <p id="dailyHadith" class="text-[15px] leading-[1.8] text-emerald-50/95">قال رسول الله ﷺ: ...</p>
+          <p id="hadithSource" class="text-[11px] text-emerald-200/60 mt-2"></p>
+        </div>
+        <div class="bg-black/30 rounded-2xl p-4 border border-emerald-900/40">
+          <div class="flex items-center justify-between mb-2">
+            <p class="text-[12px] text-emerald-300/80">آية اليوم</p>
+            <span id="ayahRef" class="text-[11px] text-emerald-200/60">البقرة</span>
           </div>
-
-          <!-- Hadith -->
-          <div class="bg-black/30 rounded-2xl p-4 border border-emerald-900/40">
-            <p class="text-[12px] text-emerald-300/80 mb-2">حديث اليوم</p>
-            <p id="dailyHadith" class="text-[15px] leading-[1.8] text-emerald-50/95">قال رسول الله ﷺ: ...</p>
-            <p id="hadithSource" class="text-[11px] text-emerald-200/60 mt-2"></p>
-          </div>
-
-          <!-- Ayah -->
-          <div class="bg-black/30 rounded-2xl p-4 border border-emerald-900/40">
-            <div class="flex items-center justify-between mb-2">
-              <p class="text-[12px] text-emerald-300/80">آية اليوم</p>
-              <span id="ayahRef" class="text-[11px] text-emerald-200/60">البقرة</span>
-            </div>
-            <p id="dailyAyah" class="quran text-[22px] leading-[2.1] text-emerald-50">...</p>
-          </div>
+          <p id="dailyAyah" class="quran text-[22px] leading-[2.1] text-emerald-50">...</p>
         </div>
       </div>
     </section>
@@ -267,41 +256,7 @@
           <p class="text-center text-sm opacity-60 font-[Cairo]">جاري تحميل السور...</p>
         </div>
 
-        <!-- Daily Content: Dua / Hadith / Ayah -->
-        <div class="glass rounded-[32px] p-5 space-y-4">
-          <h3 class="font-bold text-lg flex items-center gap-2 mb-1">
-            <span class="w-8 h-8 rounded-xl bg-emerald-500/15 flex items-center justify-center">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4 2 7-6.5-4-6.5 4 2-7L2 9h7z"/></svg>
-            </span>
-            ورد اليوم
-          </h3>
-
-          <!-- Dua -->
-          <div class="bg-black/30 rounded-2xl p-4 border border-emerald-900/40">
-            <div class="flex items-center justify-between mb-2">
-              <p class="text-[12px] text-emerald-300/80">دعاء اليوم</p>
-              
-            </div>
-            <p id="dailyDua" class="quran text-[20px] leading-[1.9] text-emerald-50">اللهم اجعل يومنا هذا خيراً</p>
-          </div>
-
-          <!-- Hadith -->
-          <div class="bg-black/30 rounded-2xl p-4 border border-emerald-900/40">
-            <p class="text-[12px] text-emerald-300/80 mb-2">حديث اليوم</p>
-            <p id="dailyHadith" class="text-[15px] leading-[1.8] text-emerald-50/95">قال رسول الله ﷺ: ...</p>
-            <p id="hadithSource" class="text-[11px] text-emerald-200/60 mt-2"></p>
-          </div>
-
-          <!-- Ayah -->
-          <div class="bg-black/30 rounded-2xl p-4 border border-emerald-900/40">
-            <div class="flex items-center justify-between mb-2">
-              <p class="text-[12px] text-emerald-300/80">آية اليوم</p>
-              <span id="ayahRef" class="text-[11px] text-emerald-200/60">البقرة</span>
-            </div>
-            <p id="dailyAyah" class="quran text-[22px] leading-[2.1] text-emerald-50">...</p>
-          </div>
-        </div>
-      </div>
+        
     </section>
 
     <!-- AZKAR -->
