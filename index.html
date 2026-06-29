@@ -63,6 +63,27 @@
 :where(code, pre, kbd, samp) {
   font-family: "Optimistic Mono", ui-monospace, monospace;
 }
+</style><style>
+@font-face {
+  font-family: "Optimistic";
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url("/fonts/OptimisticAI_VF_Optimized.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Optimistic Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/OptimisticMono_W_TextRegular.woff2") format("woff2");
+}
+:where(html) {
+  font-family: "Optimistic", system-ui, sans-serif;
+}
+:where(code, pre, kbd, samp) {
+  font-family: "Optimistic Mono", ui-monospace, monospace;
+}
 </style>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -154,6 +175,41 @@
             <p id="countdown" class="font-mono text-xl font-bold text-emerald-300 tracking-wider">--:--:--</p>
           </div>
         </div>
+
+        <!-- Daily Content: Dua / Hadith / Ayah -->
+        <div class="glass rounded-[32px] p-5 space-y-4">
+          <h3 class="font-bold text-lg flex items-center gap-2 mb-1">
+            <span class="w-8 h-8 rounded-xl bg-emerald-500/15 flex items-center justify-center">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4 2 7-6.5-4-6.5 4 2-7L2 9h7z"/></svg>
+            </span>
+            ورد اليوم
+          </h3>
+
+          <!-- Dua -->
+          <div class="bg-black/30 rounded-2xl p-4 border border-emerald-900/40">
+            <div class="flex items-center justify-between mb-2">
+              <p class="text-[12px] text-emerald-300/80">دعاء اليوم</p>
+              
+            </div>
+            <p id="dailyDua" class="quran text-[20px] leading-[1.9] text-emerald-50">اللهم اجعل يومنا هذا خيراً</p>
+          </div>
+
+          <!-- Hadith -->
+          <div class="bg-black/30 rounded-2xl p-4 border border-emerald-900/40">
+            <p class="text-[12px] text-emerald-300/80 mb-2">حديث اليوم</p>
+            <p id="dailyHadith" class="text-[15px] leading-[1.8] text-emerald-50/95">قال رسول الله ﷺ: ...</p>
+            <p id="hadithSource" class="text-[11px] text-emerald-200/60 mt-2"></p>
+          </div>
+
+          <!-- Ayah -->
+          <div class="bg-black/30 rounded-2xl p-4 border border-emerald-900/40">
+            <div class="flex items-center justify-between mb-2">
+              <p class="text-[12px] text-emerald-300/80">آية اليوم</p>
+              <span id="ayahRef" class="text-[11px] text-emerald-200/60">البقرة</span>
+            </div>
+            <p id="dailyAyah" class="quran text-[22px] leading-[2.1] text-emerald-50">...</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -209,6 +265,41 @@
 
         <div id="versesContainer" class="quran mt-4 bg-black/20 rounded-2xl p-4 border border-emerald-900/30 max-h-[320px] overflow-y-auto no-scrollbar text-[23px] leading-[2.3] text-emerald-50/95">
           <p class="text-center text-sm opacity-60 font-[Cairo]">جاري تحميل السور...</p>
+        </div>
+
+        <!-- Daily Content: Dua / Hadith / Ayah -->
+        <div class="glass rounded-[32px] p-5 space-y-4">
+          <h3 class="font-bold text-lg flex items-center gap-2 mb-1">
+            <span class="w-8 h-8 rounded-xl bg-emerald-500/15 flex items-center justify-center">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4 2 7-6.5-4-6.5 4 2-7L2 9h7z"/></svg>
+            </span>
+            ورد اليوم
+          </h3>
+
+          <!-- Dua -->
+          <div class="bg-black/30 rounded-2xl p-4 border border-emerald-900/40">
+            <div class="flex items-center justify-between mb-2">
+              <p class="text-[12px] text-emerald-300/80">دعاء اليوم</p>
+              
+            </div>
+            <p id="dailyDua" class="quran text-[20px] leading-[1.9] text-emerald-50">اللهم اجعل يومنا هذا خيراً</p>
+          </div>
+
+          <!-- Hadith -->
+          <div class="bg-black/30 rounded-2xl p-4 border border-emerald-900/40">
+            <p class="text-[12px] text-emerald-300/80 mb-2">حديث اليوم</p>
+            <p id="dailyHadith" class="text-[15px] leading-[1.8] text-emerald-50/95">قال رسول الله ﷺ: ...</p>
+            <p id="hadithSource" class="text-[11px] text-emerald-200/60 mt-2"></p>
+          </div>
+
+          <!-- Ayah -->
+          <div class="bg-black/30 rounded-2xl p-4 border border-emerald-900/40">
+            <div class="flex items-center justify-between mb-2">
+              <p class="text-[12px] text-emerald-300/80">آية اليوم</p>
+              <span id="ayahRef" class="text-[11px] text-emerald-200/60">البقرة</span>
+            </div>
+            <p id="dailyAyah" class="quran text-[22px] leading-[2.1] text-emerald-50">...</p>
+          </div>
         </div>
       </div>
     </section>
@@ -762,5 +853,128 @@ window.addEventListener('load', ()=>{
 
 </script>
 <script>(function(){document.addEventListener("click",function(e){var a=e.target.closest("[data-product-id]");if(!a)return;e.preventDefault();var pid=a.getAttribute("data-product-id");if(pid)parent.postMessage({type:"ecto-artifact-link-click",productId:pid},"*")})})();</script>
-<script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;var a=target.closest?target.closest("a[href]"):null;if(!a||!a.href||!/^https?:\/\//.test(a.href))return;if(a.href.replace(/#.*$/,"")===loc)return;var productId=extractProductId(target)||extractProductId(a);if(!productId)return;e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*")},true)})();</script><script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;var a=target.closest?target.closest("a[href]"):null;if(!a||!a.href||!/^https?:\/\//.test(a.href))return;if(a.href.replace(/#.*$/,"")===loc)return;var productId=extractProductId(target)||extractProductId(a);if(!productId)return;e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*")},true)})();</script><script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;var a=target.closest?target.closest("a[href]"):null;if(!a||!a.href||!/^https?:\/\//.test(a.href))return;if(a.href.replace(/#.*$/,"")===loc)return;var productId=extractProductId(target)||extractProductId(a);if(!productId)return;e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*")},true)})();</script></body>
+<script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;var a=target.closest?target.closest("a[href]"):null;if(!a||!a.href||!/^https?:\/\//.test(a.href))return;if(a.href.replace(/#.*$/,"")===loc)return;var productId=extractProductId(target)||extractProductId(a);if(!productId)return;e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*")},true)})();</script><script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;var a=target.closest?target.closest("a[href]"):null;if(!a||!a.href||!/^https?:\/\//.test(a.href))return;if(a.href.replace(/#.*$/,"")===loc)return;var productId=extractProductId(target)||extractProductId(a);if(!productId)return;e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*")},true)})();</script><script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;var a=target.closest?target.closest("a[href]"):null;if(!a||!a.href||!/^https?:\/\//.test(a.href))return;if(a.href.replace(/#.*$/,"")===loc)return;var productId=extractProductId(target)||extractProductId(a);if(!productId)return;e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*")},true)})();</script>
+<script>
+// ==== ورد اليوم: دعاء - حديث - آية ====
+const duas = [
+  "اللهم اجعل هذا اليوم فتحاً ونصراً ونوراً وبركة وهداية",
+  "اللهم إني أسألك خير هذا اليوم وخير ما بعده",
+  "اللهم ارزقنا رزقاً حلالاً طيباً مباركاً فيه",
+  "اللهم اشرح صدورنا ويسر أمورنا",
+  "اللهم اغفر لنا ولوالدينا وللمؤمنين",
+  "اللهم يا مقلب القلوب ثبت قلوبنا على دينك",
+  "اللهم إنا نسألك العفو والعافية في الدنيا والآخرة",
+  "اللهم اكفنا بحلالك عن حرامك وأغننا بفضلك عمن سواك",
+  "اللهم اجعل القرآن ربيع قلوبنا",
+  "اللهم ارزقنا حسن الخاتمة",
+  "اللهم تولنا فيمن توليت",
+  "اللهم إنا نعوذ بك من الهم والحزن",
+  "اللهم بارك لنا في أوقاتنا وأعمالنا",
+  "اللهم اهدنا واهد بنا واجعلنا سببا لمن اهتدى",
+  "اللهم استرنا فوق الأرض وتحت الأرض ويوم العرض",
+  "اللهم ارزقنا توبة نصوحا قبل الموت",
+  "اللهم اجعلنا من الذاكرين الشاكرين",
+  "اللهم فرج هم المهمومين",
+  "اللهم اشف مرضانا ومرضى المسلمين",
+  "اللهم احفظنا من بين أيدينا ومن خلفنا",
+  "اللهم ارزقنا الجنة بغير حساب",
+  "اللهم إنا نسألك رضاك والجنة",
+  "اللهم اجعل عملنا خالصاً لوجهك",
+  "اللهم قنا عذاب النار",
+  "اللهم ارزقنا الصبر عند البلاء",
+  "اللهم اجعلنا من المتقين",
+  "اللهم طهر قلوبنا من النفاق",
+  "اللهم ارزقنا لذة النظر إلى وجهك",
+  "اللهم اجعلنا من أهل الفجر",
+  "اللهم تقبل منا صالح الأعمال"
+];
+
+const ahadith = [
+  {text:"قال رسول الله ﷺ: إنما الأعمال بالنيات وإنما لكل امرئ ما نوى", source:"متفق عليه"},
+  {text:"قال رسول الله ﷺ: من كان يؤمن بالله واليوم الآخر فليقل خيراً أو ليصمت", source:"البخاري ومسلم"},
+  {text:"قال رسول الله ﷺ: تبسمك في وجه أخيك صدقة", source:"الترمذي"},
+  {text:"قال رسول الله ﷺ: خيركم من تعلم القرآن وعلمه", source:"البخاري"},
+  {text:"قال رسول الله ﷺ: الدنيا سجن المؤمن وجنة الكافر", source:"مسلم"},
+  {text:"قال رسول الله ﷺ: اتق الله حيثما كنت", source:"الترمذي"},
+  {text:"قال رسول الله ﷺ: لا يؤمن أحدكم حتى يحب لأخيه ما يحب لنفسه", source:"متفق عليه"},
+  {text:"قال رسول الله ﷺ: الكلمة الطيبة صدقة", source:"متفق عليه"},
+  {text:"قال رسول الله ﷺ: من لا يرحم لا يُرحم", source:"متفق عليه"},
+  {text:"قال رسول الله ﷺ: يسروا ولا تعسروا", source:"البخاري"},
+  {text:"قال رسول الله ﷺ: إن الله جميل يحب الجمال", source:"مسلم"},
+  {text:"قال رسول الله ﷺ: الدين النصيحة", source:"مسلم"},
+  {text:"قال رسول الله ﷺ: احفظ الله يحفظك", source:"الترمذي"},
+  {text:"قال رسول الله ﷺ: الحياء لا يأتي إلا بخير", source:"متفق عليه"},
+  {text:"قال رسول الله ﷺ: أفضل الذكر لا إله إلا الله", source:"الترمذي"},
+  {text:"قال رسول الله ﷺ: من صمت نجا", source:"الترمذي"},
+  {text:"قال رسول الله ﷺ: إنما بعثت لأتمم مكارم الأخلاق", source:"أحمد"},
+  {text:"قال رسول الله ﷺ: لا تغضب", source:"البخاري"},
+  {text:"قال رسول الله ﷺ: المؤمن القوي خير وأحب إلى الله", source:"مسلم"},
+  {text:"قال رسول الله ﷺ: من حسن إسلام المرء تركه ما لا يعنيه", source:"الترمذي"},
+  {text:"قال رسول الله ﷺ: ازهد في الدنيا يحبك الله", source:"ابن ماجه"},
+  {text:"قال رسول الله ﷺ: إن الله يحب إذا عمل أحدكم عملاً أن يتقنه", source:"الطبراني"},
+  {text:"قال رسول الله ﷺ: خير الناس أنفعهم للناس", source:"الطبراني"},
+  {text:"قال رسول الله ﷺ: الصبر ضياء", source:"مسلم"},
+  {text:"قال رسول الله ﷺ: من تواضع لله رفعه", source:"مسلم"},
+  {text:"قال رسول الله ﷺ: دع ما يريبك إلى ما لا يريبك", source:"الترمذي"},
+  {text:"قال رسول الله ﷺ: البر حسن الخلق", source:"مسلم"},
+  {text:"قال رسول الله ﷺ: اتقوا النار ولو بشق تمرة", source:"متفق عليه"},
+  {text:"قال رسول الله ﷺ: من سلك طريقاً يلتمس فيه علماً سهل الله له به طريقاً إلى الجنة", source:"مسلم"},
+  {text:"قال رسول الله ﷺ: الراحمون يرحمهم الرحمن", source:"أبو داود"}
+];
+
+function updateDailyContent(){
+  const now = new Date();
+  // يحسب اليوم بعد 12 ليلاً
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const start = new Date(2025,0,1); // بداية العد
+  const dayIndex = Math.floor((today - start) / 86400000);
+  
+  // دعاء
+  const dua = duas[dayIndex % duas.length];
+  document.getElementById('dailyDua').textContent = dua;
+  
+  // حديث
+  const hadith = ahadith[dayIndex % ahadith.length];
+  document.getElementById('dailyHadith').textContent = hadith.text;
+  document.getElementById('hadithSource').textContent = hadith.source;
+  
+  // آية - تبدأ من البقرة (الآية رقم 8 عالمياً)
+  const firstBaqaraGlobal = 8; // الفاتحة 7 آيات
+  const totalQuranVerses = 6236;
+  const versesFromBaqara = totalQuranVerses - 7; // 6229
+  const globalAyah = firstBaqaraGlobal + (dayIndex % versesFromBaqara);
+  
+  fetch(`https://api.alquran.cloud/v1/ayah/${globalAyah}/ar.uthmani`)
+    .then(r=>r.json())
+    .then(data=>{
+      if(data && data.data){
+        document.getElementById('dailyAyah').textContent = data.data.text;
+        document.getElementById('ayahRef').textContent = `${data.data.surah.name} : ${data.data.numberInSurah}`;
+      }
+    })
+    .catch(()=>{
+      // fallback لو النت ضعيف
+      const fallbackAyat = [
+        "ذَٰلِكَ الْكِتَابُ لَا رَيْبَ ۛ فِيهِ ۛ هُدًى لِّلْمُتَّقِينَ",
+        "وَإِذَا سَأَلَكَ عِبَادِي عَنِّي فَإِنِّي قَرِيبٌ",
+        "اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ",
+        "آمَنَ الرَّسُولُ بِمَا أُنزِلَ إِلَيْهِ مِن رَّبِّهِ"
+      ];
+      document.getElementById('dailyAyah').textContent = fallbackAyat[dayIndex % fallbackAyat.length];
+      document.getElementById('ayahRef').textContent = "البقرة";
+    });
+}
+
+// شغّل عند التحميل
+window.addEventListener('load', updateDailyContent);
+// وحدّث بعد منتصف الليل
+setInterval(()=>{
+  const now = new Date();
+  if(now.getHours()===0 && now.getMinutes()===0){
+    updateDailyContent();
+  }
+}, 60000);
+</script>
+
+<script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;var a=target.closest?target.closest("a[href]"):null;if(!a||!a.href||!/^https?:\/\//.test(a.href))return;if(a.href.replace(/#.*$/,"")===loc)return;var productId=extractProductId(target)||extractProductId(a);if(!productId)return;e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*")},true)})();</script></body>
 </html>
